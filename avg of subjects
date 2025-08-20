@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int numSubjects, i;
+    float marks, total = 0.0, average;
+
+    printf("Enter the number of subjects: ");
+    scanf("%d", &numSubjects);
+
+    for(i = 1; i <= numSubjects; i++) {
+        printf("Enter marks for subject %d: ", i);
+        scanf("%f", &marks);
+        total += marks;
+    }
+
+    average = total / numSubjects;
+    printf("\nTotal Marks = %.2f\n", total);
+    printf("Average Marks = %.2f\n", average);
+
+    return 0;
+}
